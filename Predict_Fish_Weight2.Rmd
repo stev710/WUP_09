@@ -85,14 +85,54 @@ print(results)
 
 ```
 
-The best two variables for pike is length 1 and length 3
+The best two variables for pike is length 1 and length 3.
 
 ### Best Two regressor model
 
+```{r}
+pikemodel=lm(Weight~Length1+Length3, data=pike)
+summary(pikemodel)
+```
+
+The best model for adjusted r squared is 0.9649
+
 ## Roach
+```{r}
+Roach = filter(fishData, Species == "Roach")
+```
+
 
 ### Best Models
 
+```{r}
+models = regsubsets(Weight ~ Length1+Length2+Length3+Height+Width, data=Roach,
+                    nvmax=5)
+
+summary(models)
+
+res.sum <- summary(models)
+Adj.R2 = which.max(res.sum$adjr2)
+print(paste("best adjusted r-squared", Adj.R2))
+
+results = data.frame(
+  Adj.R2 = which.max(res.sum$adjr2),
+  CP = which.min(res.sum$cp),
+  BIC = which.min(res.sum$bic)
+)
+print(results)
+
+```
+
+the best two variables for roach and length3 and width.
+
 ### Best Two regressor model
+```{r}
+Roachmodel=lm(Weight~Length3+Width, data=Roach)
+summary(Roachmodel)
+```
+The best model for the adjusted r squared is 0.8482.
 
 ## Final Summary Statements
+
+
+
