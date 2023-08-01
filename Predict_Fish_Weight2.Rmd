@@ -38,7 +38,7 @@ summary(models)
 
 res.sum <- summary(models)
 Adj.R2 = which.max(res.sum$adjr2)
-print(paste("best adjusted r-squared", Adj.R2))
+#print(paste("best adjusted r-squared", Adj.R2))
 
 results = data.frame(
   Adj.R2 = which.max(res.sum$adjr2),
@@ -74,7 +74,7 @@ summary(models)
 
 res.sum <- summary(models)
 Adj.R2 = which.max(res.sum$adjr2)
-print(paste("best adjusted r-squared", Adj.R2))
+#print(paste("best adjusted r-squared", Adj.R2))
 
 results = data.frame(
   Adj.R2 = which.max(res.sum$adjr2),
@@ -112,7 +112,7 @@ summary(models)
 
 res.sum <- summary(models)
 Adj.R2 = which.max(res.sum$adjr2)
-print(paste("best adjusted r-squared", Adj.R2))
+#print(paste("best adjusted r-squared", Adj.R2))
 
 results = data.frame(
   Adj.R2 = which.max(res.sum$adjr2),
