@@ -66,6 +66,27 @@ pike = filter(fishData, Species == "Pike")
 
 ### Best Models
 
+```{r}
+models = regsubsets(Weight ~ Length1+Length2+Length3+Height+Width, data=pike,
+                    nvmax=5)
+
+summary(models)
+
+res.sum <- summary(models)
+Adj.R2 = which.max(res.sum$adjr2)
+print(paste("best adjusted r-squared", Adj.R2))
+
+results = data.frame(
+  Adj.R2 = which.max(res.sum$adjr2),
+  CP = which.min(res.sum$cp),
+  BIC = which.min(res.sum$bic)
+)
+print(results)
+
+```
+
+The best two variables for pike is length 1 and length 3
+
 ### Best Two regressor model
 
 ## Roach
