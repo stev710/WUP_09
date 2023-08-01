@@ -1,6 +1,6 @@
 ---
 title: "Weight of Fish"
-author: "Your Name"
+author: "Estevan Green"
 date: "`r Sys.Date()`"  
 output: 
   html_document:
@@ -9,7 +9,7 @@ output:
     toc_depth: 5
 ---
 
- setwd("C:/Users/16617/Documents/AVC/Math115/WUP_09")
+
 
 ```{r include=FALSE,echo=FALSE}
 require(tigerstats)
