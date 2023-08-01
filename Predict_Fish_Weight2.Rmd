@@ -49,9 +49,15 @@ print(results)
 
 ```
 
+the best two variables to predict weight are height and width.
 
 ### Best Two regressor model
 
+```{r}
+perchModel=lm(Weight~Height+Width,data = perch)
+summary(perchModel)
+```
+For the best model adjust r squared was 0.94.
 
 ## Pike
 ```{r}
