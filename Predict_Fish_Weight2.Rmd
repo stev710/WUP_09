@@ -136,3 +136,4 @@ The best model for the adjusted r squared is 0.8482.
 
 Looking at datat collected by all three models from lowest to highest. Roach being 0.8482 then perch at 0.94 and pike at 0.96.This is concluding that pike is the best model of the 3 since it was the highest value. 
 
+
